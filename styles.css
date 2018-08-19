@@ -83,7 +83,7 @@ code {
   nav div {
     height: 100px;
     overflow: auto;
-    border: 1px solid black;
+    border-bottom:  1px solid black;
   }
   nav li {
     margin-left: 5px;
