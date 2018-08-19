@@ -15,26 +15,46 @@
 
   <nav id="navbar">
     <header>Basics of CSS</header>
-    <a class="nav-link" href="#introduction">
-      <li>Introduction</li>
-    </a>
+    <div>
+      <a class="nav-link" href="#introduction">
+        <li>Introduction</li>
+      </a>
 
-    <a class="nav-link" href="#Applying_CSS_Code">
-      <li>Applying CSS Code</li>
-    </a>
+      <a class="nav-link" href="#Applying_CSS_Code">
+        <li>Applying CSS Code</li>
+      </a>
 
-    <a class="nav-link" href="#Syntax_of_a_CSS_Code">
-      <li>Syntax of a CSS Code</li>
-    </a>
+      <a class="nav-link" href="#Syntax_of_a_CSS_Code">
+        <li>Syntax of a CSS Code</li>
+      </a>
 
-    <a class="nav-link" href="#Selecting_an_Element">
-      <li>Selecting an Element</li>
-    </a>
+      <a class="nav-link" href="#Selecting_an_Element">
+        <li>Selecting an Element</li>
+      </a>
 
-    <a class="nav-link" href="#Selecting_Classes_and_IDs">
-      <li>Selecting Classes and IDs</li>
-    </a>
+      <a class="nav-link" href="#Selecting_Classes_and_IDs">
+        <li>Selecting Classes and IDs</li>
+      </a>
+      <a class="nav-link" href="#More_Selectors">
+        <li>More Selectors</li>
+      </a>
 
+      <a class="nav-link" href="#Case_Insensitvity">
+        <li>Case Insensitvity</li>
+      </a>
+
+      <a class="nav-link" href="#Order_of_Precedence">
+        <li>Order of Precedence</li>
+      </a>
+
+      <a class="nav-link" href="#Display_Inconsistency">
+        <li>Display Inconsistency</li>
+      </a>
+
+      <a class="nav-link" href="#Comments">
+        <li>Comments</li>
+      </a>
+    </div>
   </nav>
 
   <main id="main-doc">
@@ -81,9 +101,10 @@
               methods. We’ll discuss order of precedence later in this chapter. However, inline CSS mixes styling with content and should be avoided whenever possible.</p>
 
       </article>
-
-      <section id="Syntax_of_a_CSS_Code" class='main-section'>
-        <header>Syntax of a CSS Code</header>
+    </section>
+    <section id="Syntax_of_a_CSS_Code" class='main-section'>
+      <header>Syntax of a CSS Code</header>
+      <article>
         <p>Now that we know how to apply CSS rules to our HTML files, let’s move on to learn some actual CSS code. The first thing to learn about CSS is its syntax, which is relatively straightforward. The syntax is:</p> <code>selector { property : value; property : value; property : value; }</code>
         <p>For instance, if you want to style the contents inside a &lt;div&gt; tag, you write the rule as</p><code>div { <br>&nbsp;&nbsp;background-color: green;<br>
   &nbsp;&nbsp;font-size: 12px;   <br>}</code>
@@ -92,30 +113,107 @@
           Finally, you end each declaration with a semi-colon (;).</p>
         <p>Indentation and line breaks do not matter in CSS. You can also write your declarations like this:</p> <code>div { background-color: green; font-size: 12px; }</code>
         <p>Pretty straightforward right? Great! Let’s move on...</p>
+      </article>
+    </section>
 
-      </section>
-      <section id="Selecting_an_Element" class='main-section'>
-        <header>Selecting an Element</header>
-        <article>
-          <p>Selecting an Element In the example above, the rules declared in the curly brackets will apply to ALL elements with a &lt;iv&gt; tag. However, most of the time, we want greater variation. Suppose you want one &lt;div&gt; element to have a font
-            size of 12px and another to have a font size of 14px. How would you do it?</p>
-        </article>
-      </section>
-      <section id="Selecting_Classes_and_IDs" class='main-section'>
-        <header>Selecting Classes and IDs</header>
-        <article>
-          <p>There are basically two ways to do it. The first method is to use the id attribute. In your HTML document, instead of just using the &lt;div&gt; tag, you can add an id attribute to it. For instance, you can write
-            <p/> <code>&lt;div id=”para1”&gt;<br>&nbsp;&nbsp;Some text.<br>&lt;/div&gt; <br>&lt;div id=”para2”&gt; <br>&nbsp;&nbsp;More text.<br> &lt;/div&gt;</code>
-            <p>In our CSS code, we can then select the respective id by adding a # sign in front of the id name. An example is shown below:</p> <code>div {<br> &nbsp;&nbsp;background-color: green; <br> }<br>  #para1<br>  {<br>  &nbsp;&nbsp;font-size: 12px;<br> }&nbsp;&nbsp; <br> #para2 { <br>&nbsp;&nbsp;font-size: 14px; <br>}</code>
-            <p>This chapter will be continued very soon with following sections:</p>
-            <ul>
-              <li>More Selectors</li>
-              <li>Case Insensitvity</li>
-              <li>Order of Precedence</li>
-              <li>Display Inconsistency</li>
-              <li>Comments</li>
-            </ul>
+    <section id="Selecting_an_Element" class='main-section'>
+      <header>Selecting an Element</header>
+      <article>
+        <p>Selecting an Element In the example above, the rules declared in the curly brackets will apply to ALL elements with a &lt;iv&gt; tag. However, most of the time, we want greater variation. Suppose you want one &lt;div&gt; element to have a font
+          size of 12px and another to have a font size of 14px. How would you do it?</p>
+      </article>
+    </section>
+
+    <section id="Selecting_Classes_and_IDs" class='main-section'>
+      <header>Selecting Classes and IDs</header>
+      <article>
+        <p>There are basically two ways to do it. The first method is to use the id attribute. In your HTML document, instead of just using the &lt;div&gt; tag, you can add an id attribute to it. For instance, you can write
+          <p/> <code>&lt;div id=”para1”&gt;<br>&nbsp;&nbsp;Some text.<br>&lt;/div&gt; <br>&lt;div id=”para2”&gt; <br>&nbsp;&nbsp;More text.<br> &lt;/div&gt;</code>
+          <p>In our CSS code, we can then select the respective id by adding a # sign in front of the id name. An example is shown below:</p> <code>div {<br> &nbsp;&nbsp;background-color: green; <br> }<br>  #para1<br>  {<br>  &nbsp;&nbsp;font-size: 12px;<br> }&nbsp;&nbsp; <br> #para2 { <br>&nbsp;&nbsp;font-size: 14px; <br>}</code>
+
+    </section>
+    <section id="More_Selectors" class='main-section'>
+      <header>More Selectors</header>
+      <article>
+        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+          It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with
+          desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+
+        <p>Why do we use it? It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed
+          to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still
+          in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).</p>
+      </article>
+    </section>
+    <section id="Case_Insensitvity" class='main-section'>
+      <header>Case Insensitvity</header>
+      <article>
+        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+          It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with
+          desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+        <p>Why do we use it? It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed
+          to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still
+          in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).</p>
+        <p>Why do we use it? It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed
+          to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still
+          in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).</p>
+      </article>
+    </section>
+    <section id="Order_of_Precedence" class='main-section'>
+      <header>Order of Precedence</header>
+      <article>
+        <p>Why do we use it? It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed
+          to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still
+          in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).</p>
+        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+          It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with
+          desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+
+        <ul>
+          <li>More Selectors</li>
+          <li>Case Insensitvity</li>
+          <li>Order of Precedence</li>
+          <li>Display Inconsistency</li>
+          <li>Comments</li>
+
+        </ul>
+        <p>Why do we use it? It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed
+          to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still
+          in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).</p>
+        <p>Why do we use it? It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed
+          to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still
+          in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).</p>
+      </article>
+    </section>
+    <section id="Display_Inconsistency" class='main-section'>
+      <header>Display Inconsistency</header>
+      <article>
+        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+          It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with
+          desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+        <p>Why do we use it? It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed
+          to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still
+          in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).</p>
+        <p>Why do we use it? It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed
+          to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still
+          in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).</p>
+      </article>
+    </section>
+    <section id="Comments" class='main-section'>
+      <header>Comments</header>
+      <article>
+        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+          It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with
+          desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+        <p>Why do we use it? It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed
+          to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still
+          in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).</p>
+        <p>Why do we use it? It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed
+          to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still
+          in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).</p>
+      </article>
+    </section>
   </main>
+
 </body>
 
 </html>
